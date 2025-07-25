@@ -25,6 +25,11 @@ public class ExpenseController {
 	
 	@Autowired
 	ExpenseDao expenseDao;
+
+	@GetMapping("logout")
+	public String getMethodName() {
+		return "login";
+	}
 	
 	@GetMapping("/home")
     public String home(@RequestParam int id , Model model) {
